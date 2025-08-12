@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Nalu\\Pratica02\\' => array($baseDir . '/src'),
+    'Model\\' => array($baseDir . '/Model'),
+    'Controller\\' => array($baseDir . '/Controller'),
 );

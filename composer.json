@@ -3,14 +3,23 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Nalu\\Pratica02\\": "src/"
-        }
+            "Nalu\\Pratica02\\": "src/",
+            "Model\\": "Model/",
+            "Controller\\": "Controller/"
+        },
+        "files": [
+            "Config/configuration.php"
+        ]
     },
     "authors": [
         {
-            "name": "nalu"
+            "name": "nalu",
+            "email": "annaluisateixeira8@gmail.com"
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": ">=8.0",
+        "ext-mbstring": "*"
+    }
 }

@@ -6,10 +6,22 @@ namespace Composer\Autoload;
 
 class ComposerStaticIniteedf0fc2590901e936655a116ceca88e
 {
+    public static $files = array (
+        '0120f466961d1230eefb9801d83ebc91' => __DIR__ . '/../..' . '/Config/configuration.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'N' => 
         array (
             'Nalu\\Pratica02\\' => 15,
+        ),
+        'M' => 
+        array (
+            'Model\\' => 6,
+        ),
+        'C' => 
+        array (
+            'Controller\\' => 11,
         ),
     );
 
@@ -17,6 +29,14 @@ class ComposerStaticIniteedf0fc2590901e936655a116ceca88e
         'Nalu\\Pratica02\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Model\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Model',
+        ),
+        'Controller\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Controller',
         ),
     );
 
