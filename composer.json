@@ -1,0 +1,16 @@
+{
+    "name": "nalu/pratica02",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Nalu\\Pratica02\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nalu"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
