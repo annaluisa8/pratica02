@@ -5,22 +5,22 @@ namespace Controller;
 use Model\Pizzas;
 
 class PizzasController{
-    //Pegar informações
-    public function getPizzas()
-    {
-        $pizza = new Pizzas();
-        $pizzas = $pizza->getPizzas();
+    
+    public function getPizzas(){
 
-        if ($pizzas) {
-            // Envia a resposta JSON
-            header('Content-Type: application/json', true,200);
-            echo json_encode($pizzas);
-        } else {
-            header('Content-Type: application/json', true,404);
-            echo json_encode(["message" => "No pizzas found"]);
-        }
+    $id = isset($_GET['id']) ? intval($_GET['id']) : null;
+
+    $pizza = new Pizzas();
+    $pizzas = $pizza->getPizzas($id);
+
+    if ($pizzas) {
+        header('Content-Type: application/json', true, 200);
+        echo json_encode($pizzas);
+    } else {
+        header('Content-Type: application/json', true, 404);
+        echo json_encode(["message" => "Not found"]);
     }
-
+    }
     //Criar pizza
     public function createPizza()
     {

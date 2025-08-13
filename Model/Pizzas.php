@@ -18,14 +18,21 @@ class Pizzas {
     }
 
     //Obter todas as pizzas cadastradas
-        public function getPizzas()
-    {
-        $sql = "SELECT * FROM pizzas";
+
+       public function getPizzas($id = null){
+
+        if($id){
+        $sql = 'SELECT * FROM pizzas WHERE id = :id';
         $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        
+        } else {
+            $sql =  'SELECT * FROM pizzas';
+            $stmt = $this->conn->prepare($sql);
+        }
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
     // Criare nova pizza
     public function createPizza()
     {
